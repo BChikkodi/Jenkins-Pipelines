@@ -10,6 +10,10 @@ agent any
 				sh 'sudo apt update -y'
 				sh 'sudo apt install nginx -y'
 			}
+                 steps ('restart-ngnix')
+                      sh 'sudo apt restart -y'
+                      sh 'sudo apt restart ngnix -y'
+                 }
 		}
 		
 		stage ('deploy-index')
